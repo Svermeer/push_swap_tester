@@ -3,11 +3,10 @@
 # === CONFIG ===
 PUSH_SWAP="./push_swap"           # Path to your push_swap binary
 VISUALIZER="visualizer_bonus/visualizer"         # Path to your visualizer binary
-COUNT=5                         # Number of random integers to generate
+COUNT=100                         # Number of random integers to generate
 
 # === STEP 1: Generate unique random numbers ===
-#ARGS=$(seq 1 $COUNT | shuf | tr '\n' ' ')
-ARGS="5 1 8 6 9"
+ARGS=$(seq 1 $COUNT | shuf | tr '\n' ' ')
 
 # === STEP 2: Run push_swap to get instructions ===
 OPS=$($PUSH_SWAP $ARGS)
